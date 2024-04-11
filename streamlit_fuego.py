@@ -10,7 +10,7 @@ from census import Census
 from us import states
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key.json"
-OpenAIKey = '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'
+OpenAIKey = 'YOUR_KEY_HERE'
 
 
 client_bq = bigquery.Client()
@@ -147,7 +147,7 @@ def package_output(prompt, results):
 
 
 #################################################################################
-weather_api_key = "ca1906ce6ebf321aaaef2d1899a2b006"
+weather_api_key = 'YOUR_KEY_HERE'
 weather_base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
 value_keys = {
@@ -158,9 +158,9 @@ value_keys = {
 
 def get_economy(state_code, year=None):
   if year:
-    c = Census("f507210223354169efae3b4780e18bf35714ec38", year=year) # need to re-init each time to avoid sync errors :(
+    c = Census('YOUR_KEY_HERE', year=year) # need to re-init each time to avoid sync errors :(
   else:
-    c = Census("f507210223354169efae3b4780e18bf35714ec38")
+    c = Census('YOUR_KEY_HERE')
 
   r = c.acs1.get(('NAME', 'B06011_001E', 'B18120_002E', 'B18120_012E'), #combed through ACS tables for fields: https://www.census.gov/programs-surveys/acs/technical-documentation/table-shells.html
             {'for': f"state:{eval(f'states.{state_code}.fips')}"})[0]
