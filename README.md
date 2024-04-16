@@ -1,4 +1,5 @@
-![image](https://github.com/Nathan-Roll1/GPT-FIRE/assets/96995554/f6895e53-f96d-47c2-b311-a5cebc3b0cc6)
+![image](https://github.com/Nathan-Roll1/gpt-fuego/assets/96995554/499fe231-6a6c-4c75-bdc7-b8eb96980be1)
+
 
 ![GPT-fuego Demo](gpt-fuego-demo.gif)
 
